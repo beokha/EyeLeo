@@ -1,0 +1,257 @@
+﻿@paddingBodySide: 150px; 
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-size: large;
+}
+.wrapper {
+    min-height: 100%;
+}
+.tFlRight {
+    float: right;
+}
+
+/* Menu */
+header {
+    padding-top: 20px;
+    padding-left: @paddingBodySide;
+    padding-right: @paddingBodySide;
+    background-image: url("images/HeaderBackground.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 650px;
+    @height: 45px;
+
+    #Logo {
+        display: inline-block;
+
+        img {
+            max-height: @height;
+            max-width: @height;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        h1 {
+            display: inline-block;
+            padding: 0px;
+            margin: 0px;
+            font-size: large;
+            font-weight: inherit;
+        }
+    }
+
+    @media screen and (max-width: 920px) {
+        #Logo {
+            display: none;
+        }
+    }
+
+    nav {
+        display: inline-block;
+        float: right;
+        line-height: @height;
+        height: @height;
+        width: calc(145*3px);
+
+        .NavBuyButton {
+            outline: 2px solid black;
+        }
+
+        div {
+            display: inline-block;
+            width: 140px;
+            text-align: center;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                width: 100%;
+                height: 100%;
+            }
+
+            a:hover, a:visited {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+
+    #aboutApp {
+        margin-top: 60px;
+
+        #aboutAppLeft {
+            text-align: center;
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        #aboutAppRight {
+            position: relative;
+
+            #foot1, #foot2, #foot3, #foot4, #foot5, #foot6 {
+                position: absolute;
+                display: none;
+            }
+
+            #foot1 {
+                top: 50px;
+                display: block;
+            }
+
+            #foot2 {
+                top: 0px;
+                left: 25%;
+            }
+
+            #foot3 {
+                top: 50px;
+                left: 45%;
+            }
+
+            #foot4 {
+                top: 110px;
+                left: 65%;
+            }
+
+            #foot5 {
+                top: 215px;
+                left: 70%;
+            }
+
+            #foot6 {
+                top: 300px;
+                left: 67%;
+            }
+        }
+    }
+
+    .aboutAppArticle {
+        text-align: center;
+
+        p {
+            margin-top: 50px;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+    }
+}
+
+
+/* Main block */
+.row {
+    margin: 0;
+}
+@MarginOrPadding: 35px;
+main > div {
+    padding-top: @MarginOrPadding;
+    padding-bottom: @MarginOrPadding;
+    padding-left: @paddingBodySide;
+    padding-right: @paddingBodySide;
+    background-color: RGB(245, 249, 247);
+    text-align: center;
+
+    article {
+        line-height: 1.2;
+
+        ul {
+            margin-top: @MarginOrPadding;
+            list-style-type: none;
+        }
+    }
+
+    div {
+
+        h2 {
+            display: inline-block;
+            margin: 0;
+            padding-left: 5px;
+            font-size: 55px;
+        }
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+}
+main > div:first-of-type { margin-bottom: 25px; }
+main > div:last-of-type {
+    > div:first-of-type {
+        display: inline-block;
+    }
+
+    div {
+        height: 91px;
+        line-height: 91px;
+
+        h2 {
+            line-height: 91px;
+        }
+        img {
+            margin-top: -30px;  
+            cursor: pointer;
+        }
+
+        button {
+            width: 170px;
+            height: 60px;
+            line-height: 60px;
+
+            font-size: 25px;
+            border: 0;
+            background-color: RGB(52, 122, 81);
+        }
+    }
+}
+
+/* Footer */
+footer {
+    padding-top: calc(255/2px);
+    padding-left: @paddingBodySide;
+    padding-right: @paddingBodySide;
+    background-image: url("images/BOTTOM.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 255px;
+    margin: 0px;
+
+    .row {
+        padding-left: 140px;
+        padding-right: 140px;
+        position: relative;
+        text-align: center;
+
+        div {
+            line-height: 45px;
+            height: 45px;
+        }
+
+        .social {
+            text-align: left;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            height: 100%;
+        }
+
+        a:hover, a:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    .row:last-of-type {
+        padding-top: 45px;
+        padding-bottom: 25px;
+    }
+}
